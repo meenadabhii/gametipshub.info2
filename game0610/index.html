@@ -219,16 +219,16 @@
         })();
     </script>
 
-    <style>
+      <style>
         :root {
-            --primary-dark: #1a0033;
-            --primary-medium: #946cbd;
+            --primary-dark: #f5a512;
+            --primary-medium: #c0a6da;
             --primary-light: #bf9fdf;
             --accent-gold: #cfc59b;
             --accent-light: #d3cca7;
             --text-light: #f0e6ff;
-            --text-dark: #1a0033;
-            --shadow-dark: rgba(0, 0, 0, 0.5);
+            --text-dark: #d6c8e2;
+            --shadow-dark: rgba(238, 195, 195, 0.5);
             --shadow-light: rgba(255, 204, 0, 0.3);
         }
 
@@ -312,7 +312,7 @@
             max-width: 425px;
             margin: 1rem auto 0.5rem;
             padding: 0.5rem;
-            background: rgba(51, 0, 102, 0.7);
+            background: rgba(155, 131, 179, 0.7);
             box-shadow: 0 4px 15px var(--shadow-dark);
             border-radius: 8px;
             position: relative;
@@ -522,174 +522,159 @@
         <div id="banner-ad" class="ads-box">
             <div id="ad-slot-1" class="ad-container"></div>
         </div>
+        <div class="mb-6 text-center float-animation">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 mx-auto text-indigo-600" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+            </svg>
+        </div>
 
-        <div class="bg-white rounded-2xl shadow-xl overflow-hidden animate__animated animate__fadeIn">
-            <div class="p-6">
-                <div class="text-center mb-6">
-                    <h1 class="text-3xl font-bold text-indigo-900">UPI Payment Guide</h1>
-                    <p class="text-gray-600 mt-2">India's revolutionary payment system</p>
-                </div>
+        <div class="mb-6 text-center">
+            <h2 class="text-xl font-semibold text-gray-800">Age Verification</h2>
+            <p class="text-gray-600 mt-2">Financial education is best suited for informed adults</p>
+        </div>
 
-                <div class="mb-6 text-center float-animation">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 mx-auto text-indigo-600" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                    </svg>
-                </div>
+        <div class="space-y-4">
+            <button onclick="window.location.href='page2.html'"
+                class="w-full py-3 px-4 bg-indigo-900 hover:bg-indigo-800 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 animate__animated animate__bounceIn">
+                I am 18 or older
+            </button>
+            <button onclick="window.location.href='page2.html'"
+                class="w-full py-3 px-4 bg-gray-700 hover:bg-gray-600 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 animate__animated animate__bounceIn animate__delay-1s">
+                I am under 18
+            </button>
+        </div>
 
+        <!-- Global Finance Section 1 -->
+        <div class="info-card bg-indigo-50 rounded-lg p-4 my-6">
+            <h3 class="font-semibold text-indigo-800 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+                Rise of Digital Finance
+            </h3>
 
-                <div class="mb-6 text-center">
-                    <h2 class="text-xl font-semibold text-gray-800">Age Verification</h2>
-                    <p class="text-gray-600 mt-2">Financial content requires age confirmation</p>
-                </div>
-
-                <div class="space-y-4">
-                    <button onclick="window.location.href='page2.html'"
-                        class="w-full py-3 px-4 bg-indigo-900 hover:bg-indigo-800 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 animate__animated animate__bounceIn">
-                        I am 18 or older
-                    </button>
-                    <button onclick="window.location.href='page2.html'"
-                        class="w-full py-3 px-4 bg-gray-700 hover:bg-gray-600 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 animate__animated animate__bounceIn animate__delay-1s">
-                        I am under 18
-                    </button>
-                </div>
-
-                <!-- UPI Information Section 1 -->
-                <div class="info-card bg-indigo-50 rounded-lg p-4 my-6">
-                    <h3 class="font-semibold text-indigo-800 flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                        </svg>
-                        UPI Growth in India
-                    </h3>
-                    <!-- Ad Space Bottom -->
-                    <div id="banner-ad" class="ads-box">
-                        <div id="ad-slot-1" class="ad-container"></div>
-                    </div>
-                    <div class="scroll-content text-sm text-gray-700 mt-2">
-                        <p class="mb-2">Unified Payments Interface (UPI) has transformed digital payments in India:</p>
-                        <ul class="space-y-1 pl-2">
-                            <li class="flex items-start">
-                                <span class="text-indigo-600 mr-1">•</span>
-                                <span>Processed over 8 billion transactions monthly (as of 2023)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-indigo-600 mr-1">•</span>
-                                <span>Annual transaction value crossed ₹125 lakh crore</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-indigo-600 mr-1">•</span>
-                                <span>Supported by 300+ banks and financial institutions</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-indigo-600 mr-1">•</span>
-                                <span>Used by over 260 million Indians regularly</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- UPI Information Section 2 -->
-                <div class="info-card bg-indigo-50 rounded-lg p-4 mb-4">
-                    <h3 class="font-semibold text-indigo-800 flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                        </svg>
-                        How UPI Works
-                    </h3>
-                    <div class="scroll-content text-sm text-gray-700 mt-2">
-                        <p class="mb-2">UPI's simple yet powerful architecture:</p>
-                        <ol class="space-y-2 pl-2">
-                            <li class="flex items-start">
-                                <span class="font-bold text-indigo-600 mr-1">1.</span>
-                                <span>Create a UPI ID (e.g., yourname@bankname)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="font-bold text-indigo-600 mr-1">2.</span>
-                                <span>Link your bank account to the UPI app</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="font-bold text-indigo-600 mr-1">3.</span>
-                                <span>Send/receive money using just the UPI ID or QR code</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="font-bold text-indigo-600 mr-1">4.</span>
-                                <span>Transactions are authenticated with MPIN (6-digit security code)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="font-bold text-indigo-600 mr-1">5.</span>
-                                <span>Instant transfer between any two bank accounts</span>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-
-                <!-- UPI Information Section 3 -->
-                <div class="info-card bg-indigo-50 rounded-lg p-4 mb-6">
-                    <h3 class="font-semibold text-indigo-800 flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        Benefits of UPI
-                    </h3>
-                    <div class="scroll-content text-sm text-gray-700 mt-2">
-                        <div class="grid grid-cols-2 gap-2 mb-2">
-                            <div class="bg-white p-2 rounded text-center">
-                                <div class="text-indigo-600 font-bold">24/7</div>
-                                <div class="text-xs">Availability</div>
-                            </div>
-                            <div class="bg-white p-2 rounded text-center">
-                                <div class="text-indigo-600 font-bold">₹0</div>
-                                <div class="text-xs">Transaction Fees</div>
-                            </div>
-                            <div class="bg-white p-2 rounded text-center">
-                                <div class="text-indigo-600 font-bold">Instant</div>
-                                <div class="text-xs">Transfers</div>
-                            </div>
-                            <div class="bg-white p-2 rounded text-center">
-                                <div class="text-indigo-600 font-bold">Secure</div>
-                                <div class="text-xs">Encryption</div>
-                            </div>
-                        </div>
-                        <p class="mt-2">Additional advantages:</p>
-                        <ul class="space-y-1 pl-2">
-                            <li class="flex items-start">
-                                <span class="text-indigo-600 mr-1">•</span>
-                                <span>No need to share bank account details</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-indigo-600 mr-1">•</span>
-                                <span>Works across all banks and payment apps</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-indigo-600 mr-1">•</span>
-                                <span>Supports bill payments, subscriptions, and merchant payments</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-indigo-600 mr-1">•</span>
-                                <span>International acceptance in select countries</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-
+            <div class="scroll-content text-sm text-gray-700 mt-2">
+                <p class="mb-2">Digital finance is reshaping global economies:</p>
+                <ul class="space-y-1 pl-2">
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 mr-1">•</span>
+                        <span>Global digital payment volume exceeded $10 trillion in 2023</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 mr-1">•</span>
+                        <span>More than 5 billion users use digital wallets worldwide</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 mr-1">•</span>
+                        <span>Financial technology (FinTech) is growing rapidly across all continents</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 mr-1">•</span>
+                        <span>Cross-border transactions are becoming instant and seamless</span>
+                    </li>
+                </ul>
             </div>
         </div>
 
+        <div id="banner-ad" class="ads-box">
+            <div id="ad-slot-1" class="ad-container"></div>
+        </div>
+
+        <!-- Global Finance Section 2 -->
+        <div class="info-card bg-indigo-50 rounded-lg p-4 mb-4">
+            <h3 class="font-semibold text-indigo-800 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+                How Digital Wealth Works
+            </h3>
+            <div class="scroll-content text-sm text-gray-700 mt-2">
+                <p class="mb-2">Digital wealth management includes:</p>
+                <ol class="space-y-2 pl-2">
+                    <li class="flex items-start">
+                        <span class="font-bold text-indigo-600 mr-1">1.</span>
+                        <span>Create an online investment account with a trusted platform</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-indigo-600 mr-1">2.</span>
+                        <span>Link bank accounts or wallets securely</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-indigo-600 mr-1">3.</span>
+                        <span>Track investments in stocks, crypto, real estate and more</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-indigo-600 mr-1">4.</span>
+                        <span>Use AI and data to make informed financial decisions</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-indigo-600 mr-1">5.</span>
+                        <span>Enjoy instant access and global control over your wealth</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Global Finance Section 3 -->
+        <div class="info-card bg-indigo-50 rounded-lg p-4 mb-6">
+            <h3 class="font-semibold text-indigo-800 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Benefits of Financial Digitization
+            </h3>
+            <div class="scroll-content text-sm text-gray-700 mt-2">
+                <div class="grid grid-cols-2 gap-2 mb-2">
+                    <div class="bg-white p-2 rounded text-center">
+                        <div class="text-indigo-600 font-bold">24/7</div>
+                        <div class="text-xs">Global Access</div>
+                    </div>
+                    <div class="bg-white p-2 rounded text-center">
+                        <div class="text-indigo-600 font-bold">Low Fees</div>
+                        <div class="text-xs">Affordable Transactions</div>
+                    </div>
+                    <div class="bg-white p-2 rounded text-center">
+                        <div class="text-indigo-600 font-bold">Secure</div>
+                        <div class="text-xs">Encryption & Privacy</div>
+                    </div>
+                    <div class="bg-white p-2 rounded text-center">
+                        <div class="text-indigo-600 font-bold">Instant</div>
+                        <div class="text-xs">Transfers & Updates</div>
+                    </div>
+                </div>
+                <p class="mt-2">Other global advantages:</p>
+                <ul class="space-y-1 pl-2">
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 mr-1">•</span>
+                        <span>No need for physical banking visits</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 mr-1">•</span>
+                        <span>Access to international markets and currencies</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 mr-1">•</span>
+                        <span>Supports savings, investments, and retirement planning</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 mr-1">•</span>
+                        <span>Compatible with mobile devices worldwide</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
         <!-- Ad Space Bottom -->
     </div>
-
-
-
-
     <div id="ad-anchor-slot"></div>
 
     <script>
