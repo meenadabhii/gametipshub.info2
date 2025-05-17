@@ -1,0 +1,240 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f0eb; /* Light beige background */
+  color: #333333; /* Dark gray text for readability */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 1rem;
+}
+
+/* Header */
+.main-header {
+  background-color: #e75f50; /* Deep red header */
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f26522; /* Soft red hover effect */
+}
+
+.btn-login {
+  background-color: hsl(56, 92%, 49%); /* Soft red button */
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  background: url('bank-hero.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  background-color: #9b2d20; /* Deep red hero background */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background-color: #f26522; /* Accent red button */
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #9b2d20; /* Deep red on hover */
+}
+
+/* Features */
+.features {
+  background-color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fefefe;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+/* Page Sections */
+.about-section,
+.services-section,
+.accounts-section,
+.faq-section,
+.contact-section {
+  padding: 4rem 0;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.about-section h2,
+.services-section h2,
+.accounts-section h2,
+.faq-section h2,
+.contact-section h2 {
+  color: #9b2d20; /* Deep red headers */
+  margin-bottom: 1rem;
+}
+
+/* CTA */
+.cta {
+  background-color: #9b2d20; /* Deep red CTA */
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* Footer */
+.main-footer {
+  background-color: #73201f; /* Darker red footer */
+  color: #ccc;
+  padding: 1rem 0;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-columns h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-columns ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-columns ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-columns ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-columns ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .main-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-primary,
+  .btn-login {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .feature {
+    padding: 1rem;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}

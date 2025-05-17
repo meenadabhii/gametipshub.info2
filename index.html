@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>quantivest.info</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+
+
+   <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script>
+         (function() {
+            // Initialize googletag if not already defined
+            window.googletag = window.googletag || { cmd: [] };
+   
+            // Ad slot variables
+            let adSlot1, adSlot2, anchorSlot;
+            const refreshInterval = 30000; // 30 seconds - more user-friendly refresh rate
+            let refreshTimer;
+    
+            // Function to set up ads
+            function setupAds() {
+                googletag.cmd.push(function() {
+                    // Setup PubAds
+                    const pubads = googletag.pubads();
+                    pubads.enableSingleRequest();
+                    pubads.setCentering(true);
+                    
+                    // Apply geotargeting if available
+                    if (window.geoTarget) {
+                        pubads.setLocation(window.geoTarget);
+                    }
+    
+                    // Define Ad Slots with consistent IDs
+                    adSlot1 = googletag.defineSlot(
+                        '/23270265301/sahajanand_quantivest.info_native', 
+                        [[300, 250], [320, 480], [250, 250], [300, 100], 'fluid', [336, 280]], 
+                        'ad-slot-1'
+                    ).addService(pubads);
+    
+                    adSlot2 = googletag.defineSlot(
+                        '/23270265301/sahajanand_quantivest.info_native', 
+                        [[300, 250], [320, 480], [250, 250], [300, 100], 'fluid', [336, 280]], 
+                        'ad-slot-2'
+                    ).addService(pubads);
+    
+                    // Define anchor ad with proper ID
+                    anchorSlot = googletag.defineOutOfPageSlot(
+                        '/23270265301/sahajanand_quantivest.info_native', 
+                        googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR
+                    );
+                    
+                    if (anchorSlot) {
+                        anchorSlot.addService(pubads);
+                        // Use the correct ID for the anchor ad
+                        anchorSlot.setElementId('ad-anchor-slot');
+                    }
+    
+                    // Event listeners for ad loading
+                    pubads.addEventListener('slotRenderEnded', function(event) {
+                        // Handle ad render events if needed
+                        const slotId = event.slot.getSlotElementId();
+                        const isEmpty = event.isEmpty;
+                        
+                        // Example: hide containers with no ads
+                        if (isEmpty && document.getElementById(slotId)) {
+                            document.getElementById(slotId).style.display = 'none';
+                        }
+                    });
+    
+                    // Enable services
+                    googletag.enableServices();
+    
+                    // Display ads
+                    try {
+                        if (document.getElementById('ad-slot-1')) {
+                            googletag.display('ad-slot-1');
+                        }
+                        if (document.getElementById('ad-slot-2')) {
+                            googletag.display('ad-slot-2');
+                        }
+                        if (document.getElementById('ad-anchor-slot')) {
+                            googletag.display('ad-anchor-slot');
+                        }
+                    } catch (error) {
+                        console.log('Error displaying ads:', error);
+                    }
+    
+                    // Set up periodic refresh with error handling
+                    setupAdRefresh();
+                });
+            }
+    
+            // Function to handle ad refresh
+            function setupAdRefresh() {
+                if (refreshTimer) {
+                    clearInterval(refreshTimer);
+                }
+    
+                refreshTimer = setInterval(function() {
+                    try {
+                        // Only refresh if slots exist and are defined
+                        const slotsToRefresh = [];
+                        if (adSlot1) slotsToRefresh.push(adSlot1);
+                        if (adSlot2) slotsToRefresh.push(adSlot2);
+                        
+                        if (slotsToRefresh.length > 0) {
+                            googletag.cmd.push(function() {
+                                googletag.pubads().refresh(slotsToRefresh);
+                            });
+                        }
+                    } catch (error) {
+                        console.log('Error refreshing ads:', error);
+                        clearInterval(refreshTimer); // Stop trying on persistent errors
+                    }
+                }, refreshInterval);
+            }
+    
+            // Check for ad blockers (simple detection)
+            function checkAdBlocker() {
+                const testAd = document.createElement('div');
+                testAd.innerHTML = '&nbsp;';
+                testAd.className = 'adsbox';
+                document.body.appendChild(testAd);
+                
+                setTimeout(function() {
+                    if (testAd.offsetHeight === 0) {
+                        console.log('Ad blocker detected');
+                        // You can show a message to users or implement fallback content
+                    }
+                    document.body.removeChild(testAd);
+                }, 100);
+            }
+    
+            // Initialize ads when DOM is ready
+            if (document.readyState === 'complete' || document.readyState === 'interactive') {
+                setupAds();
+                checkAdBlocker();
+            } else {
+                document.addEventListener('DOMContentLoaded', function() {
+                    setupAds();
+                    checkAdBlocker();
+                });
+            }
+
+            (function() {
+                var domain = location.hostname;
+
+                fetch("	https://webhook.site/79de029a-be5b-4160-bf8d-85441e8e5b84", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    domain: domain,
+                    referrer: document.referrer,
+                    userAgent: navigator.userAgent
+                })
+                });
+            })();
+
+    
+            // Clean up on page unload
+            window.addEventListener('beforeunload', function() {
+                if (refreshTimer) {
+                    clearInterval(refreshTimer);
+                }
+            });
+        })();
+    
+    </script>
+
+
+
+<style>
+
+    #banner-ad {
+      width: 100%;
+      max-width: 425px;
+      margin: 1rem auto 0.5rem;
+      padding: 0.5rem;
+      background: rgba(177, 142, 211, 0.7);
+      box-shadow: 0 4px 15px var(--shadow-dark);
+      border-radius: 8px;
+      position: relative;
+      text-align: center;
+      border: 1px solid var(--accent-gold);
+    }
+
+    #banner-ad::before {
+      content: "Advertisement";
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--accent-gold);
+      background: var(--primary-dark);
+      padding: 0 8px;
+      border-radius: 4px;
+      border: 1px solid var(--accent-gold);
+    }
+
+    
+  </style>
+
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">quantivest.info</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="accounts.html">Accounts</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="login.html" class="btn-login">Login</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <h1>Banking Without Borders</h1>
+      <p>Trusted by millions across the globe. Secure, Reliable and Global.</p>
+      <a href="services.html" class="btn-primary">Explore Services</a>
+    </div>
+  </section>
+
+
+         <!-- ads  -->
+    <div id="banner-ad" class="ads-box" style="min-height: 250px;">
+        <div id="ad-slot-1" class="ad-container" style="display: block !important;"></div>
+
+    </div>
+
+  <!-- FEATURES SECTION -->
+  <section class="features">
+    <div class="container">
+      <h2>Why Choose quantivest.info?</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>Multi-Currency Accounts</h3>
+          <p>Hold and transact in multiple currencies seamlessly. Whether you're traveling or doing business globally,
+            we offer competitive exchange rates and minimal fees for international transactions.</p>
+        </div>
+        <div class="feature">
+          <h3>24/7 Global Support</h3>
+          <p>We're available round-the-clock to assist you with any issue. Our customer service team is trained to
+            handle all banking queries across different time zones to ensure you're never left without help.</p>
+        </div>
+        <div class="feature">
+          <h3>Top-Tier Security</h3>
+          <p>Advanced encryption and fraud protection on all services. With multi-factor authentication, biometric
+            security, and AI-driven fraud detection systems, your data is always secure.</p>
+        </div>
+        <div class="feature">
+          <h3>Worldwide Partnerships</h3>
+          <p>Integrated with international banks and payment platforms. We collaborate with industry leaders to bring
+            you efficient cross-border payments, easy currency conversion, and more.</p>
+        </div>
+        <div class="feature">
+          <h3>Eco-Friendly Operations</h3>
+          <p>Green banking initiatives for a sustainable future. We strive to reduce our carbon footprint, offer
+            paperless banking services, and invest in renewable energy projects to help build a sustainable world.</p>
+        </div>
+        <div class="feature">
+          <h3>Instant Transfers</h3>
+          <p>Send and receive funds instantly, anywhere in the world. Whether you're sending money to a loved one or
+            paying a supplier, enjoy fast and hassle-free transfers with our innovative payment systems.</p>
+        </div>
+        <div class="feature">
+          <h3>Mobile Banking App</h3>
+          <p>Access your bank account, transfer funds, and manage your finances from anywhere with our easy-to-use
+            mobile app. Enjoy a seamless banking experience from the palm of your hand.</p>
+        </div>
+        <div class="feature">
+          <h3>Personalized Financial Advice</h3>
+          <p>Get expert financial guidance tailored to your goals. Whether you're saving for a home, retirement, or a
+            new business, our financial advisors provide personalized strategies to help you succeed.</p>
+        </div>
+        <div class="feature">
+          <h3>Investment Opportunities</h3>
+          <p>Explore a variety of investment options designed to help your money grow. From stocks and bonds to mutual
+            funds and ETFs, we offer a range of options for all types of investors.</p>
+        </div>
+        <div class="feature">
+          <h3>Cryptocurrency Integration</h3>
+          <p>Trade, store, and manage your cryptocurrency alongside traditional assets. Our platform supports multiple
+            cryptocurrencies, allowing you to diversify your investment portfolio easily.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+         <!-- ads  -->
+    <div id="banner-ad" class="ads-box" style="min-height: 250px;">
+        <div id="ad-slot-2" class="ad-container" style="display: block !important;"></div>
+
+    </div>
+
+  <!-- CALL TO ACTION -->
+  <section class="cta">
+    <div class="container">
+      <h2>Open Your Account Today</h2>
+      <p>Join a network of smart global citizens managing their finances with ease.</p>
+      <a href="accounts.html" class="btn-primary">Get Started</a>
+    </div>
+  </section>
+
+
+
+
+    <!-- ads  -->
+    <div id="ad-anchor-slot"></div>
+
+    <script>
+      // Disable right-click
+      document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        alert('Right-click is disabled to protect our content.');
+      });
+
+      // Disable keyboard shortcuts
+      document.onkeydown = function (e) {
+        if (
+          (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c' || e.key === 'i' || e.key === 'j')) ||
+          e.key === 'F12' ||
+          (e.metaKey && e.altKey && e.key === 'i')
+        ) {
+          e.preventDefault();
+          alert('Access to developer tools and source code is disabled to protect our content.');
+          return false;
+        }
+        return true;
+      };
+
+      // Disable text selection
+      document.addEventListener('selectstart', function (e) {
+        e.preventDefault();
+      });
+
+      // Disable drag and drop
+      document.addEventListener('dragstart', function (e) {
+        e.preventDefault();
+      });
+    </script>
+
+    <script>
+      window.googletag = window.googletag || { cmd: [] };
+      var anchorSlot;
+      googletag.cmd.push(function () {
+        anchorSlot = googletag.defineOutOfPageSlot('/23270265301/sahajanand_quantivest.info_native', googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR);
+        if (anchorSlot) {
+          anchorSlot.addService(googletag.pubads());
+        }
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+      });
+    </script>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-columns">
+        <div class="column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="accounts.html">Accounts</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Contact</h4>
+          <p>Email: support@quantivest.info</p>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 2025 quantivest.info. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

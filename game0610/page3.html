@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI for Teens | UPI India</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        .animate__animated {
+            --animate-duration: 0.6s;
+        }
+        .animate__delay-1s {
+            --animate-delay: 0.3s;
+        }
+        .animate__delay-2s {
+            --animate-delay: 0.6s;
+        }
+        .qr-code {
+            transition: all 0.3s ease;
+        }
+        .qr-code:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans px-4 py-6">
+    <div class="w-full max-w-md mx-auto">
+        <!-- Ad Space Top -->
+        <div class="bg-gray-200 h-20 mb-6 rounded-lg flex items-center justify-center text-gray-500 animate__animated animate__fadeIn">
+            Advertisement Space
+        </div>
+        
+        <header class="mb-8 text-center animate__animated animate__fadeInDown">
+            <h1 class="text-3xl font-bold text-indigo-900">UPI for beginners</h1>
+            <p class="text-gray-600 mt-2">Learn about digital payments safely</p>
+            <div class="mt-4">
+                <button id="themeToggle" class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm flex items-center mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                    Dark Mode
+                </button>
+            </div>
+        </header>
+        
+        <!-- UPI Basics Section -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-6 animate__animated animate__zoomIn">
+            <div class="p-5">
+                <div class="flex items-center">
+                    <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-semibold text-gray-800">Learning About UPI</h2>
+                </div>
+                <p class="text-gray-600 mt-3">UPI (Unified Payments Interface) is India's mobile payment system that lets you transfer money between banks using your smartphone.</p>
+                
+                <!-- Expandable UPI Details -->
+                <div class="mt-4">
+                    <button id="upiDetailsBtn" class="text-indigo-600 text-sm font-medium flex items-center">
+                        Learn more
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="upiDetailsContent" class=" mt-3 space-y-3">
+                        <p><span class="font-medium">How it works:</span> Link your bank account to a UPI app (like Google Pay, PhonePe, Paytm) using your mobile number.</p>
+                        <p><span class="font-medium">UPI ID:</span> Your unique payment address (like name@bankname). Share this to receive money.</p>
+                        <p><span class="font-medium">MPIN:</span> A 4-6 digit secret code to authorize transactions (never share this!).</p>
+                        
+                        <div class="bg-indigo-50 p-3 rounded-lg mt-3">
+                            <h4 class="font-medium text-indigo-900 mb-2">Try a Demo Payment</h4>
+                            <button id="demoPaymentBtn" class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm animate__animated animate__pulse animate__infinite">
+                                Simulate UPI Payment
+                            </button>
+                            <div id="demoPaymentStatus" class="mt-2 text-sm hidden"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- UPI Apps Comparison -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-6 animate__animated animate__fadeInLeft">
+            <div class="p-5">
+                <h2 class="text-xl font-semibold text-gray-800 mb-3 flex items-center">
+                    Popular UPI Apps
+                </h2>
+                
+                <div class="mt-4 bg-yellow-50 p-3 rounded-lg border border-yellow-100">
+                    <h4 class="font-medium text-yellow-800 mb-1">Which one to choose?</h4>
+                    <p class="text-xs text-yellow-700">All apps work similarly. Choose based on interface preference. Google Pay is simplest for beginners.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Safety Tips -->
+        <div class="mb-8 animate__animated animate__fadeInUp">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">Safety Tips for Young Users</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-indigo-900 transform transition-all duration-300 hover:translate-x-2">
+                    <h3 class="font-medium text-gray-800">Always use with parent's guidance</h3>
+                    <p class="text-sm text-gray-600 mt-1">Never make payments without informing your parents.</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-indigo-900 transform transition-all duration-300 hover:translate-x-2">
+                    <h3 class="font-medium text-gray-800">Never share your MPIN</h3>
+                    <p class="text-sm text-gray-600 mt-1">Your MPIN is like a password - keep it secret.</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-indigo-900 transform transition-all duration-300 hover:translate-x-2">
+                    <h3 class="font-medium text-gray-800">Verify before paying</h3>
+                    <p class="text-sm text-gray-600 mt-1">Always check the recipient's details twice.</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-indigo-900 transform transition-all duration-300 hover:translate-x-2">
+                    <h3 class="font-medium text-gray-800">Use UPI Lite for small amounts</h3>
+                    <p class="text-sm text-gray-600 mt-1">UPI Lite allows payments up to ₹200 without entering MPIN each time.</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-indigo-900 transform transition-all duration-300 hover:translate-x-2">
+                    <h3 class="font-medium text-gray-800">Check transaction limits</h3>
+                    <p class="text-sm text-gray-600 mt-1">Most student accounts have lower daily limits for safety.</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-indigo-900 transform transition-all duration-300 hover:translate-x-2">
+                    <h3 class="font-medium text-gray-800">Beware of scams</h3>
+                    <p class="text-sm text-gray-600 mt-1">Never share OTPs or click on payment links from unknown sources.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Ad Space Middle -->
+        <div class="bg-gray-200 h-20 my-6 rounded-lg flex items-center justify-center text-gray-500 animate__animated animate__fadeIn">
+            Advertisement Space
+        </div>
+        
+        <!-- Student-Friendly Features -->
+        <div class="animate__animated animate__fadeInUp animate__delay-1s">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">Student-Friendly Features</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-md text-center transform transition-all duration-300 hover:scale-105">
+                    <div class="bg-indigo-100 w-10 h-10 mx-auto rounded-full flex items-center justify-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-medium">Pocket Money</h3>
+                    <p class="text-xs text-gray-600">Receive from parents easily</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md text-center transform transition-all duration-300 hover:scale-105">
+                    <div class="bg-indigo-100 w-10 h-10 mx-auto rounded-full flex items-center justify-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-medium">Quick Payments</h3>
+                    <p class="text-xs text-gray-600">For school supplies</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md text-center transform transition-all duration-300 hover:scale-105">
+                    <div class="bg-indigo-100 w-10 h-10 mx-auto rounded-full flex items-center justify-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-medium">Fee Payments</h3>
+                    <p class="text-xs text-gray-600">Pay school fees online</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md text-center transform transition-all duration-300 hover:scale-105">
+                    <div class="bg-indigo-100 w-10 h-10 mx-auto rounded-full flex items-center justify-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-medium">Savings</h3>
+                    <p class="text-xs text-gray-600">Track your expenses</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md text-center transform transition-all duration-300 hover:scale-105">
+                    <div class="bg-indigo-100 w-10 h-10 mx-auto rounded-full flex items-center justify-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-medium">Security</h3>
+                    <p class="text-xs text-gray-600">Biometric authentication</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md text-center transform transition-all duration-300 hover:scale-105">
+                    <div class="bg-indigo-100 w-10 h-10 mx-auto rounded-full flex items-center justify-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-medium">Chat Payments</h3>
+                    <p class="text-xs text-gray-600">Request money from friends</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- UPI QR Code Demo -->
+        <div class="mt-8 bg-white rounded-xl shadow-lg p-5 animate__animated animate__fadeInUp">
+            <h2 class="text-xl font-semibold text-gray-800 mb-3 text-center">Try Scanning a UPI QR Code</h2>
+            <div class="text-center">
+                <div class="qr-code inline-block p-3 bg-white border rounded-lg shadow-sm mb-3">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=student123@upi&pn=Student%20Demo&am=10&tn=Demo%20Payment" alt="Demo UPI QR Code" class="w-40 h-40">
+                </div>
+                <p class="text-sm text-gray-600">Open any UPI app and scan this code to see how QR payments work</p>
+                <button id="refreshQrBtn" class="mt-2 text-indigo-600 text-sm flex items-center mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                    Generate New QR
+                </button>
+            </div>
+        </div>
+        
+        <!-- Parental Control Info -->
+        <div class="mt-8 bg-indigo-50 rounded-xl p-4 border border-indigo-100 animate__animated animate__fadeInUp animate__delay-2s">
+            <h3 class="font-semibold text-indigo-900 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                For Parents
+            </h3>
+            <p class="text-sm text-gray-700 mt-2">Most UPI apps allow setting transaction limits and monitoring transactions. Consider using these features for your child's account.</p>
+            
+            <div class="mt-3 space-y-2">
+                <div class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-0.5 mr-2 text-indigo-900 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="text-xs text-gray-700">Set daily/monthly spending limits according to your child's needs</p>
+                </div>
+                <div class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-0.5 mr-2 text-indigo-900 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="text-xs text-gray-700">Enable transaction notifications to monitor all payments</p>
+                </div>
+                <div class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-0.5 mr-2 text-indigo-900 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="text-xs text-gray-700">Use UPI apps that offer parental control features</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ Section -->
+        <div class="mt-8 animate__animated animate__fadeInUp">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-3">
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 font-medium flex justify-between items-center">
+                        <span>Can students under 18 have UPI accounts?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-900 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-4 pb-4 text-sm text-gray-600 hidden">
+                        Yes, students under 18 can have UPI accounts but they need to be linked to a bank account. Most banks allow minors to have savings accounts under parental supervision, which can then be linked to UPI apps.
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 font-medium flex justify-between items-center">
+                        <span>What is the minimum amount for UPI transactions?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-900 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-4 pb-4 text-sm text-gray-600 hidden">
+                        There is no minimum amount for UPI transactions. You can send as little as ₹1. However, some banks might have their own minimum transaction limits.
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 font-medium flex justify-between items-center">
+                        <span>Is there any charge for using UPI?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-900 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-4 pb-4 text-sm text-gray-600 hidden">
+                        No, UPI transactions are free for users. However, some merchants might charge a small fee for payments made through UPI, similar to card payments.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ad Space Bottom -->
+        <div class="bg-gray-200 h-20 mt-6 rounded-lg flex items-center justify-center text-gray-500 animate__animated animate__fadeIn">
+            Advertisement Space
+        </div>
+        
+        <!-- Footer -->
+        <footer class="mt-6 text-center text-xs text-gray-500 animate__animated animate__fadeIn">
+            <p>© 2023 UPI for Students. Educational purpose only.</p>
+            <p class="mt-1">Not affiliated with NPCI or any UPI service provider.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Faster animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set all animations to faster speed
+            const animatedElements = document.querySelectorAll('.animate__animated');
+            animatedElements.forEach(el => {
+                el.style.setProperty('--animate-duration', '0.6s');
+            });
+            
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('themeToggle');
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark');
+                if (document.body.classList.contains('dark')) {
+                    document.body.classList.add('bg-gray-900');
+                    document.body.classList.remove('bg-gray-100');
+                    themeToggle.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        Light Mode
+                    `;
+                } else {
+                    document.body.classList.add('bg-gray-100');
+                    document.body.classList.remove('bg-gray-900');
+                    themeToggle.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                        Dark Mode
+                    `;
+                }
+            });
+            
+            // UPI details expand/collapse
+            const upiDetailsBtn = document.getElementById('upiDetailsBtn');
+            const upiDetailsContent = document.getElementById('upiDetailsContent');
+            upiDetailsBtn.addEventListener('click', () => {
+                const isHidden = upiDetailsContent.classList.toggle('hidden');
+                upiDetailsBtn.querySelector('svg').style.transform = isHidden ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+            
+            // Demo payment simulation
+            const demoPaymentBtn = document.getElementById('demoPaymentBtn');
+            const demoPaymentStatus = document.getElementById('demoPaymentStatus');
+            demoPaymentBtn.addEventListener('click', () => {
+                demoPaymentStatus.classList.remove('hidden');
+                demoPaymentStatus.innerHTML = `
+                    <div class="flex items-center bg-green-50 text-green-800 p-2 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        Payment of ₹10 to "Student Demo" completed successfully!
+                    </div>
+                `;
+                setTimeout(() => {
+                    demoPaymentStatus.classList.add('animate__fadeOut');
+                    setTimeout(() => {
+                        demoPaymentStatus.classList.add('hidden');
+                        demoPaymentStatus.classList.remove('animate__fadeOut');
+                    }, 500);
+                }, 3000);
+            });
+            
+            // FAQ functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('svg');
+                    
+                    answer.classList.toggle('hidden');
+                    icon.style.transform = answer.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                });
+            });
+            
+            // Refresh QR code
+            const refreshQrBtn = document.getElementById('refreshQrBtn');
+            const qrCodeImg = document.querySelector('.qr-code img');
+            refreshQrBtn.addEventListener('click', () => {
+                const randomAmount = Math.floor(Math.random() * 90) + 10; // Random amount between 10-100
+                qrCodeImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=student123@upi&pn=Student%20Demo&am=${randomAmount}&tn=Demo%20Payment&t=${Date.now()}`;
+                
+                // Add animation
+                qrCodeImg.classList.add('animate__animated', 'animate__pulse');
+                setTimeout(() => {
+                    qrCodeImg.classList.remove('animate__animated', 'animate__pulse');
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
